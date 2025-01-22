@@ -3,6 +3,7 @@ import "./App.css";
 import Home from "./assets/pages/Home";
 import Login from "./assets/pages/Login";
 import CreatePost from "./assets/pages/CreatePost";
+import Footer from "./assets/Component/Footer.jsx";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase-config.jsx";
@@ -41,7 +42,10 @@ function App() {
         <Route path="/createpost" element={<CreatePost isAuth={isAuth} />} />
         <Route path="/login" element={<Login setIsAuth={setIsAuth} />} />
       </Routes>
+
+      <Footer/>
     </Router>
+    
   );
 }
 
